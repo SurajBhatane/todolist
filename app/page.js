@@ -45,7 +45,7 @@ const page = () => {
             onClick={() => {
               deleteHandler(i)
             }}
-            className='py-1 px-4 bg-[#F44336] rounded-md text-black'>Delete</button>
+            className='py-1 px-4 hover:bg-red-600 bg-[#F44336] rounded-md text-black'>Delete</button>
           <hr />
         </li>
 
@@ -56,7 +56,8 @@ const page = () => {
 
   return (
     <>
-      <div className='h-screen w-full '>
+      <div className='h-screen w-full relative'>
+        
 
 
         <h1 id='heading' className=' text-black text-4xl  p-5  flex items-center justify-center font-bold'> My todo List</h1>
@@ -64,7 +65,7 @@ const page = () => {
           onSubmit={(e) => {
             submitHandler(e)
           }}
-          className=' m-5'>
+          className=' w-full m-5'>
 
           <div className='mb-5'>
             <h2 className='text-xl uppercase mx-5 font-semibold '> task</h2>
@@ -77,7 +78,7 @@ const page = () => {
               }}
               type='text'
               placeholder='Enter Task here'
-              className='text-black rounded-md mx-10 p-2 border-none  '
+              className='text-black w-1/2 rounded-md mx-10 p-2 border-none  '
             />
           </div>
           <div className='mb-5'>
@@ -94,11 +95,11 @@ const page = () => {
               }}
               type='discription'
               placeholder='Enter Task Discription'
-              className='text-black rounded-md mx-10 p-2'
+              className='text-black rounded-md w-1/2 mx-10 p-2'
             />
           </div>
           <button
-            className=' w-full rounded-md flex items-center justify-center px-5 py-2 text-black font-semibold bg-purple-600'>
+            className=' hover:bg-purple-400 w-[90%] rounded-md flex items-center justify-center  py-2 text-black font-semibold bg-purple-600'>
             Add Task
           </button>
 
